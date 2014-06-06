@@ -43,7 +43,7 @@ selecting that it should copy it into place. This will make sure that the projec
 links against the framework, and is the same approach you could have used in the
 past.
 
-IMAGE HERE
+![Creating Single-View Project](assets/project-creation.png)
 
 In order for swift to be aware of the classes and methods available in any
 objective-C, you have to provide a so-called bridging header. This is a simple
@@ -72,7 +72,7 @@ __Objective-C Bridging Header__ setting - set it to the following string:
 
   $(SRCROOT)/SwiftCharts/SwiftCharts-Bridging-Header.h
 
-IMAGE HERE
+![Creating a bridging header](assets/setting-bridging-header.png)
 
 This tells the compiler which file it should be using to bridge between swift
 and objective-C.
@@ -117,6 +117,8 @@ superclass in the class definition:
 
     class ViewController: UIViewController, SChartDatasource {
 
+![Adopting the SChartDatasource protocol](assets/adopting-protocol.png)
+
 And then implement the 4 required methods as you would in objective-C. Notice that
 code completion has automatically created the swift function signatures from the
 objective-C methods:
@@ -158,7 +160,7 @@ set to the parameter, and a run-time error will occur if nil is passed in.
 If you run the app up now, then you'll have created your first ShinobiCharts app
 using swift!
 
-IMAGE
+![My First Swift Chart](assets/my-first-swift-chart.png)
 
 ### Conclusion
 
