@@ -13,6 +13,10 @@
 		22BA675719418A01009CFD6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22BA675619418A01009CFD6E /* Images.xcassets */; };
 		22BA676319418A01009CFD6E /* SwiftChartsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BA676219418A01009CFD6E /* SwiftChartsTests.swift */; };
 		22BA676E19418E4E009CFD6E /* ShinobiCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA676D19418E4E009CFD6E /* ShinobiCharts.framework */; };
+		22BA67741941953C009CFD6E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA67701941953C009CFD6E /* CoreText.framework */; };
+		22BA67751941953C009CFD6E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA67711941953C009CFD6E /* libc++.dylib */; };
+		22BA67761941953C009CFD6E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA67721941953C009CFD6E /* OpenGLES.framework */; };
+		22BA67771941953C009CFD6E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BA67731941953C009CFD6E /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 		22BA676219418A01009CFD6E /* SwiftChartsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChartsTests.swift; sourceTree = "<group>"; };
 		22BA676D19418E4E009CFD6E /* ShinobiCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShinobiCharts.framework; sourceTree = "<group>"; };
 		22BA676F19419009009CFD6E /* SwiftCharts-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftCharts-Bridging-Header.h"; sourceTree = "<group>"; };
+		22BA67701941953C009CFD6E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		22BA67711941953C009CFD6E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		22BA67721941953C009CFD6E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		22BA67731941953C009CFD6E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22BA67741941953C009CFD6E /* CoreText.framework in Frameworks */,
+				22BA67751941953C009CFD6E /* libc++.dylib in Frameworks */,
+				22BA67761941953C009CFD6E /* OpenGLES.framework in Frameworks */,
+				22BA67771941953C009CFD6E /* Security.framework in Frameworks */,
 				22BA676E19418E4E009CFD6E /* ShinobiCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +133,10 @@
 		22BA676C19418E34009CFD6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				22BA67701941953C009CFD6E /* CoreText.framework */,
+				22BA67711941953C009CFD6E /* libc++.dylib */,
+				22BA67721941953C009CFD6E /* OpenGLES.framework */,
+				22BA67731941953C009CFD6E /* Security.framework */,
 				22BA676D19418E4E009CFD6E /* ShinobiCharts.framework */,
 			);
 			name = Frameworks;
