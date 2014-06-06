@@ -70,7 +70,7 @@ Create a new header file as part of the project and call it
 __SwiftCharts-Bridging-Header.h__ - the conventional name for bridging headers.
 Add the following line to the newly created file:
 
-  #import <ShinobiCharts/ShinobiChart.h>
+    #import <ShinobiCharts/ShinobiChart.h>
 
 Here we're just importing the standard header used for ShinobiCharts - you can
 add any other objective-C headers that you wish to call from swift.
@@ -83,7 +83,7 @@ a framework, we have to do it ourselves.
 Open the build settings for the __SwiftCharts__ target and search for the 
 __Objective-C Bridging Header__ setting - set it to the following string:
 
-  $(SRCROOT)/SwiftCharts/SwiftCharts-Bridging-Header.h
+    $(SRCROOT)/SwiftCharts/SwiftCharts-Bridging-Header.h
 
 ![Creating a bridging header](assets/setting-bridging-header.png)
 
@@ -140,25 +140,25 @@ And then implement the 4 required methods as you would in objective-C. Notice th
 code completion has automatically created the swift function signatures from the
 objective-C methods:
 
-  /* SChartDatasource methods */
-  func numberOfSeriesInSChart(chart: ShinobiChart!) -> Int {
-    return 1
-  }
-    
-  func sChart(chart: ShinobiChart!, seriesAtIndex index: Int) -> SChartSeries! {
-    return SChartLineSeries()
-  }
-    
-  func sChart(chart: ShinobiChart!, numberOfDataPointsForSeriesAtIndex seriesIndex: Int) -> Int {
-    return 100
-  }
-    
-  func sChart(chart: ShinobiChart!, dataPointAtIndex dataIndex: Int, forSeriesAtIndex seriesIndex: Int) -> SChartData! {
-    let dp = SChartDataPoint()
-    dp.xValue = dataIndex
-    dp.yValue = dataIndex * dataIndex
-    return dp
-  }
+    /* SChartDatasource methods */
+    func numberOfSeriesInSChart(chart: ShinobiChart!) -> Int {
+      return 1
+    }
+      
+    func sChart(chart: ShinobiChart!, seriesAtIndex index: Int) -> SChartSeries! {
+      return SChartLineSeries()
+    }
+      
+    func sChart(chart: ShinobiChart!, numberOfDataPointsForSeriesAtIndex seriesIndex: Int) -> Int {
+      return 100
+    }
+      
+    func sChart(chart: ShinobiChart!, dataPointAtIndex dataIndex: Int, forSeriesAtIndex seriesIndex: Int) -> SChartData! {
+      let dp = SChartDataPoint()
+      dp.xValue = dataIndex
+      dp.yValue = dataIndex * dataIndex
+      return dp
+    }
 
 Most of this is fairly self-explanatory, and follows the same pattern as in objective-C,
 but there are a few things that are worth mentioning:
