@@ -154,7 +154,7 @@ types (e.g. `chart: ShinobiChart!`). This is because of the type system in swift
 doesn't allow nil-values for variables, unless they are made optional. This is
 in direct contradiction to objective-C, where any object reference can be nil.
 Therefore, the objective-C objects in the delegate signatures are optionals. The
-exclamation mark unwraps the optional value - which means that the value will be
+exclamation mark (`!`) unwraps the optional value - which means that the value will be
 set to the parameter, and a run-time error will occur if nil is passed in.
 
 If you run the app up now, then you'll have created your first ShinobiCharts app
@@ -162,5 +162,28 @@ using swift!
 
 ![My First Swift Chart](assets/my-first-swift-chart.png)
 
+
 ### Conclusion
 
+Swift offers great possibilities for the future of the iOS platform - with
+extremely modern features, whilst adding safety around some of the common mistakes
+in objective-C. The language is young, and promises to evolve over the coming years,
+which is fantastic.
+
+Obviously we've all got a lot of objective-C code still in perfect working order
+and Apple has done a lot to ensure that it is fully interoperable with swift - and
+in this post we've seen how to integrate existing pseudo-frameworks on iOS.
+
+As I mentioned at the beginning of this post, we haven't yet fully considered the
+effect of iOS8 on the ShinobiControls frameworks, but at least now with what you've
+learnt in this post you can start playing with ShinobiControls in your new swift
+projects.
+
+The code for this is available on GitHub, so you can clone it and have a go on
+your own machine. You'll need a copy of ShinobiCharts - you can download a trial
+on our website.
+
+We'll have a lot more info about swift on this blog in the coming months, along
+with the new features of iOS8, so do keep checking back.
+
+sam
