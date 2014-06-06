@@ -1,4 +1,4 @@
-# Using ShinobiCharts with Swift on iOS8
+# Using Pseudo-Frameworks with Swift on iOS8
 
 ### Introduction
 
@@ -8,26 +8,31 @@ glance Swift appears to be a well-thought-out, modern language, and I think that
 as developers we're going to have a lot of fun getting to know Swift and using
 it over the coming years.
 
-Obviously my first question was "how can I use ShinobiControls from Swift?", and
-I'm sure it was yours too. We'll be reviewing how we adopt the new features made
-available to us in Xcode 6 over the coming weeks and months, but I want to know
-how to make it work now.
+In addition to swift, the announcement that finally iOS8 will have first-class
+support for dynamic frameworks is great news, however, we've all been creating
+pseudo-frameworks for years. These are nothing more than specific directory and
+symlink structures which contain a static library and a collection of header files.
+They've served us well, and until we all get on board with the new world of iOS8
+dynamic frameworks, we want to be able to use our existing objective-C pseudo-
+frameworks in our new swift apps.
 
-In this post I'll review the steps you need to go through to integrate an 
-old-style framework on iOS with Swift (not to be confused by the new dynamic
-frameworks introduced in iOS8). This is how all the different ShinobiControls
-products are distributed, and so this represents the approach to getting them
-to work in Xcode 6 beta.
+All of the ShinobiControls products are distributed as these pseudo frameworks,
+and we'll be reviewing how we adopt the new features made available to us in
+Xcode 6 over the coming weeks and months. In this post I'll use the ShinobiCharts
+pseudo-framework as an example of how to get started with importing them into a
+swift project.
 
 It's worth noting that this process is not necessarily going to be considered
 best practice in future. As I mentioned, we're reviewing the new features made
 available in Xcode 6, and this includes the dynamic frameworks.
 
 The code for this project is available on Github at ..., but it's pretty simple -
-it's probably just as simple to follow along.
+it's probably just as simple to follow along. You can use any existing framework
+as a sample, but if you want to grab the ShinobiCharts framework I'll be using here
+then you can grab a free trial from our website.
 
 
-### Bridging ShinobiControls into Swift
+### Bridging An Objective-C Pseudo-Framework into Swift
 
 There is a lot of information in the excellent documentation for Swift about
 the interoperability between swift and objective-C - so I won't go into too much
@@ -76,6 +81,10 @@ __Objective-C Bridging Header__ setting - set it to the following string:
 
 This tells the compiler which file it should be using to bridge between swift
 and objective-C.
+
+You can now go ahead and use any of the classes in the pseudo framework from any
+of your swift files. Since we've been using the ShinobiCharts framework, let's
+take a look at creating our first chart using swift.
 
 
 ### Creating your first Swift chart
