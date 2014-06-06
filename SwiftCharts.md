@@ -80,6 +80,85 @@ and objective-C.
 
 ### Creating your first Swift chart
 
+In the same way that you do with objective-C projects, you need to add some
+additional frameworks to your project in order that it will build. Add the
+following on the __General__ project settings page:
+
+- CoreText.framework
+- libc++.dylib
+- OpenGLES.framework
+- Security.framework
+
+Now you're ready to go! Open up __ViewController.swift__ and update the 
+`viewDidLoad` function to match the following:
+
+    override func viewDidLoad() {
+      super.viewDidLoad()
+      // Do any additional setup after loading the view, typically from a nib.
+      
+      let chart = ShinobiChart(frame: view.bounds)
+      chart.licenseKey = "<YOUR LICENSE KEY HERE>"
+      chart.datasource = self
+      chart.autoresizingMask = .FlexibleHeight | .FlexibleWidth
+      view.addSubview(chart)
+    }
+
+This is just the literal swift translation of the objective-C equivalent:
+
+- `let` is used since we know we don't want to change the chart object once it
+has been created.
+- `ShinobiChart(frame: ...)` is the swift translation of the objective-C method
+`- initWithFrame:`
+- We set the `datasource` property to the current object - which means we need
+to adopt the `SChartDatasource` protocol and implement the required functions.
+
+To adopt a protocol, add it at the end of the comma-separated list after the
+superclass in the class definition:
+
+    class ViewController: UIViewController, SChartDatasource {
+
+And then implement the 4 required methods as you would in objective-C. Notice that
+code completion has automatically created the swift function signatures from the
+objective-C methods:
+
+  /* SChartDatasource methods */
+  func numberOfSeriesInSChart(chart: ShinobiChart!) -> Int {
+    return 1
+  }
+    
+  func sChart(chart: ShinobiChart!, seriesAtIndex index: Int) -> SChartSeries! {
+    return SChartLineSeries()
+  }
+    
+  func sChart(chart: ShinobiChart!, numberOfDataPointsForSeriesAtIndex seriesIndex: Int) -> Int {
+    return 100
+  }
+    
+  func sChart(chart: ShinobiChart!, dataPointAtIndex dataIndex: Int, forSeriesAtIndex seriesIndex: Int) -> SChartData! {
+    let dp = SChartDataPoint()
+    dp.xValue = dataIndex
+    dp.yValue = dataIndex * dataIndex
+    return dp
+  }
+
+Most of this is fairly self-explanatory, and follows the same pattern as in objective-C,
+but there are a few things that are worth mentioning:
+
+- The return-type in the method signature now appears at the end, after the `->`
+symbol. Functions are just named closures in swift, so this follows the closure
+syntax.
+- All the `NSObject` subclass parameters have exclamation marks at the end of their
+types (e.g. `chart: ShinobiChart!`). This is because of the type system in swift
+doesn't allow nil-values for variables, unless they are made optional. This is
+in direct contradiction to objective-C, where any object reference can be nil.
+Therefore, the objective-C objects in the delegate signatures are optionals. The
+exclamation mark unwraps the optional value - which means that the value will be
+set to the parameter, and a run-time error will occur if nil is passed in.
+
+If you run the app up now, then you'll have created your first ShinobiCharts app
+using swift!
+
+IMAGE
 
 ### Conclusion
 
