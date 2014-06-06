@@ -3,10 +3,7 @@ Using ShinobiCharts with Swift and iOS8 (Swift)
 
 This project is a demonstration on how to use ShinobiCharts in a new iOS8 project, using the new Swift language.
 
-> Note, that you'll need an Xcode6 beta, which is available from the Apple developer site at
-> [developer.apple.com](https://developer.apple.com/). This is pre-release software -
-> you can't submit apps built using iOS8 until it is released, and this project won't
-> necessarily represent best practice as we move forward. Consider yourself warned!
+> Note, that you'll need an Xcode6 beta, which is available from the Apple developer site at [developer.apple.com](https://developer.apple.com/). This is pre-release software - you can't submit apps built using iOS8 until it is released, and this project won't necessarily represent best practice as we move forward. Consider yourself warned!
 
 ![Screenshot](assets/adopting-protocol.png?raw=true)
 
