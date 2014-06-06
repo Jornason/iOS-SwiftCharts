@@ -12,9 +12,13 @@ In addition to swift, the announcement that finally iOS8 will have first-class
 support for dynamic frameworks is great news, however, we've all been creating
 pseudo-frameworks for years. These are nothing more than specific directory and
 symlink structures which contain a static library and a collection of header files.
-They've served us well, and until we all get on board with the new world of iOS8
-dynamic frameworks, we want to be able to use our existing objective-C pseudo-
-frameworks in our new swift apps.
+In fact, I wrote a rather long and involved tutorial on what pseudo-frameworks are
+and how to create them on
+[raywenderlich.com](http://www.raywenderlich.com/65964/create-a-framework-for-ios),
+which you can take a look at if you're interested in learning more about what we
+used to have to do :). They've served us well, and until we all get on board with
+the new world of iOS8 dynamic frameworks, we want to be able to use our existing
+objective-C pseudo-frameworks in our new swift apps.
 
 All of the ShinobiControls products are distributed as these pseudo frameworks,
 and we'll be reviewing how we adopt the new features made available to us in
@@ -26,10 +30,14 @@ It's worth noting that this process is not necessarily going to be considered
 best practice in future. As I mentioned, we're reviewing the new features made
 available in Xcode 6, and this includes the dynamic frameworks.
 
-The code for this project is available on Github at ..., but it's pretty simple -
+The code for this project is available on Github at
+[github.com/ShinobiControls/iOS-SwiftCharts](https://github.com/ShinobiControls/iOS-SwiftCharts)
+but it's pretty simple -
 it's probably just as simple to follow along. You can use any existing framework
 as a sample, but if you want to grab the ShinobiCharts framework I'll be using here
-then you can grab a free trial from our website.
+then you can grab a
+[free trial](http://www.shinobicontrols.com/ios/shinobicharts/price-plans/shinobicharts-premium/shinobicharts-free-trial-form)
+from our website.
 
 
 ### Bridging An Objective-C Pseudo-Framework into Swift
@@ -188,11 +196,14 @@ effect of iOS8 on the ShinobiControls frameworks, but at least now with what you
 learnt in this post you can start playing with ShinobiControls in your new swift
 projects.
 
-The code for this is available on GitHub, so you can clone it and have a go on
-your own machine. You'll need a copy of ShinobiCharts - you can download a trial
-on our website.
+The code for this is available on GitHub at 
+[github.com/ShinobiControls/iOS-SwiftCharts](https://github.com/ShinobiControls/iOS-SwiftCharts),
+so you can clone it and have a go on your own machine. You'll need a copy of ShinobiCharts -
+you can download a
+[free trial](http://www.shinobicontrols.com/ios/shinobicharts/price-plans/shinobicharts-premium/shinobicharts-free-trial-form)
+from our website.
 
-We'll have a lot more info about swift on this blog in the coming months, along
-with the new features of iOS8, so do keep checking back.
+We'll have a lot more info about swift on this [blog](http://shinobicontrols.com/blog)
+in the coming months, along with the new features of iOS8, so do keep checking back.
 
 sam
